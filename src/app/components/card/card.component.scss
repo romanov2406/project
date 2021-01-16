@@ -1,0 +1,86 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+
+  .card {
+    border-left: 4px solid palevioletred;
+    box-sizing: border-box;
+    padding: 0 0 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    .client-info {
+      border-bottom: 1px solid rgb(219, 216, 216);
+
+      .clientNameAndSurrname {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      .clientContactDaten {
+        width: 150px;
+      }
+    }
+
+    .terminInfo {
+      .leadDoctor {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .visitSatus {
+      text-align: center;
+      align-items: center;
+    }
+
+    .infoTitle {
+      color: #5D6B7E;
+    }
+
+    .badge {
+      font-size: 9px;
+    }
+  }
+}
+
+@media all and (max-width:1200px) {
+  .row {
+    .card {
+      margin: 0 10px;
+    }
+  }
+
+}
+
+@media all and (max-width:900px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media all and (max-width:600px) {
+  .row {
+    .card {
+      margin: 0 10px;
+    }
+
+    .terminInfo {
+      flex-direction: column;
+    }
+
+  }
+
+  .clientNameAndSurrname {
+    font-style: normal;
+    font-size: 12px;
+  }
+
+  .client-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}

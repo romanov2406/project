@@ -1,0 +1,18 @@
+.container-fluid {
+  height: 100vh;
+
+  .row {
+    height: 100%;
+  }
+
+  .col-lg-1,.col-lg-10 {
+    padding: 0;
+  }
+  .col-lg-10{
+    background: #F9FAFB;
+  }
+  .col-lg-1:nth-child(1) {
+    background: linear-gradient(180deg, #37383D 0%, #2A2B2F 100%);
+    box-shadow: 0px 5.23649px 10.473px rgba(0, 0, 0, 0.05);
+  }
+}

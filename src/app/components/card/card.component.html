@@ -1,0 +1,40 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="card" *ngFor="let pat of patients | paginate: { itemsPerPage: 8, currentPage: p } | search :search">
+      <div class="client-info d-flex justify-content-between p-3">
+        <div class="clientNameAndSurrname ">
+          {{pat.name}} {{pat.lastname}}
+        </div>
+        <div class="clientContactDaten d-flex justify-content-between">
+          <img src="../../../assets/images/flag.svg" alt="">
+          <img src="../../../assets/images/contactFlagGreen.svg" alt="">
+          <img src="../../../assets/images/phone.svg" alt="">
+          <img src="../../../assets/images/chat.svg" alt="">
+          <img src="../../../assets/images/email.svg" alt="">
+        </div>
+      </div>
+      <div class="terminInfo d-flex text-center">
+        <div class="leadDoctor col">
+          <span class="infoTitle">Lead Doctor</span>
+          <span style="font-size: 10px;">Doctor Andrian</span>
+        </div>
+        <div class="nextVisit col d-flex flex-column">
+          <span class="infoTitle">next visit</span>
+          <span style="font-size: 10px;">{{pat.nextVisit}} | {{pat.abliment}}</span>
+        </div>
+        <div class="visitSatus col d-flex dlex-column">
+          <span class="badge badge-pill mt-2" [ngClass]="{
+            'badge-success': pat.visitStatus === status.InTreatment,
+            'badge-danger': pat.visitStatus === status.TreatmentFinished,
+            'badge-primary': pat.visitStatus === status.TreatmentPlanCreated,
+            'badge-warning': pat.visitStatus === status.Declined
+          }">{{pat.visitStatus}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="total d-flex justify-content-between mt-4">
+    <h5>TOTAL: {{patients.length}} </h5>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

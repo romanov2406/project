@@ -1,0 +1,26 @@
+.sidebar {
+  .navs {
+    height: 300px;
+    width: 100%;
+  }
+
+  .navs-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .navs-photo:hover {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid white;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .navs-photo:nth-child(2),.navs-photo:nth-child(5) {
+    border-bottom: 2px solid rgb(54, 53, 53);
+  }
+}

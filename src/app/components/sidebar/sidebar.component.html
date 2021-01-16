@@ -1,0 +1,13 @@
+<div class="sidebar d-flex flex-column justify-content-center align-items-center h-100">
+  <div class="col d-flex align-items-start p-4 justify-content-center">
+    <img src="../../../assets/images/logo.svg" alt="">
+  </div>
+  <div class="navs d-flex flex-column justify-content-between align-items-center ">
+    <div class="navs-photo" *ngFor="let nav of navsUrl">
+      <img [src]="nav" alt="">
+    </div>
+  </div>
+  <div class="col d-flex align-items-end p-4 justify-content-center">
+    <img src="../../../assets/images/info.svg" alt="">
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.header {
+  padding: 0;
+  padding: 20px 0;
+  font-weight: bold;
+
+  .date {
+    justify-content: center;
+  }
+
+  .col-end {
+    justify-content: flex-end;
+  }
+
+  .search-and-subscribe {
+    width: 100px;
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width:768px) {
+  .header {
+    .col-lg-4:nth-child(1) {
+      text-align: center;
+    }
+
+    .date {
+      font-size: 30px;
+    }
+
+    .col-end {
+      justify-content: space-between;
+    }
+
+    .search-and-subscribe {
+      width: 100px;
+      justify-content: space-between;
+    }
+  }
+}

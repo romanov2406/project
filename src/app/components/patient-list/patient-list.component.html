@@ -1,0 +1,40 @@
+<div class="container p-0">
+  <div class="content">
+    <div class="left">Patienten List</div>
+    <div class="right d-flex">
+        <!-- sort by -->
+      <div class="d-flex  align-items-center  sortAndCalendar">
+        <span class="sortBy mr-2 ml-1">
+          Sort By:
+        </span>
+        <div class="calendar">
+          <img class="mr-2" src="../../../assets/images/calendar-schwarz.svg" alt="">
+          <span class="mr-2">16.03.2020</span>
+        </div>
+      </div>
+     <!--  -->
+     <!-- status Select -->
+      <div >
+          <select class="selectStatus mr-1 mr-1">
+              <option value="">status</option>
+          </select>
+          <img class="mr-2 ml-2" src="../../../assets/images/age.svg" alt="">
+          <img class="mr-2 ml-2" src="../../../assets/images/flag.svg" alt="">
+          <img class="mr-2 ml-2" src="../../../assets/images/Group 4645.svg" alt="">
+      </div>
+     <!--  -->
+     <!-- search and select to choose doctor -->
+     <div>
+        <select class="selectStatus mr-1 mr-1">
+            <option value="">Sort by Doctor</option>
+        </select>
+        <select class="selectStatus mr-1 mr-1">
+            <option value="">Sort by Direction</option>
+        </select>
+        <input type="text" [(ngModel)]="search" placeholder="Search">
+    </div>
+     <!--  -->
+    </div>
+  </div>
+</div>
+<app-card [search]="search"></app-card>
